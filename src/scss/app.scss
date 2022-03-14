@@ -4,8 +4,8 @@
 	display: grid;
 	background-color: $bgcolor;
 	@extend %autohw;
-	grid-template-columns: 1fr 2fr;
-	grid-template-rows: 4fr;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr;
 	column-gap: 20px;
 
 	.add_bg_here {
@@ -28,9 +28,13 @@
 		}
 	}
 	.main_stats {
-		color: $textcolor2;
+		color: #6e72b1;
 		margin-left: 20px;
 		font-size: 20px;
+		cursor: pointer;
+		.change_on_hover:hover {
+			color: white;
+		}
 	}
 	.small_cards_here {
 		display: grid;
@@ -59,6 +63,11 @@
 				font-size: 18px;
 				margin-top: -20px;
 				overflow: hidden;
+				.work_and_ellip {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+				}
 			}
 		}
 	}

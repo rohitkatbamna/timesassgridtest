@@ -1,9 +1,11 @@
 import "./scss/app.scss";
 import personimg from "./assets/images/image-jeremy.png";
-import workimg from "./assets/images/icon-work.svg";
-import epll from "./assets/images/icon-ellipsis.svg";
-
+import Smallcard from "./small_card";
+import jsondata from "./assets/data.json";
+import { useState } from "react";
 function App() {
+	const [first, setfirst] = useState("weekly");
+
 	return (
 		<div className="App">
 			<div className="add_bg_here">
@@ -21,138 +23,33 @@ function App() {
 					</div>
 				</div>
 				<div className="main_stats">
-					<h6>Daily</h6>
-					<h6>Weekly</h6>
-					<h6>Monthly</h6>
+					<h6
+						className="change_on_hover"
+						onClick={() => {
+							setfirst("daily");
+						}}>
+						Daily
+					</h6>
+					<h6
+						className="change_on_hover"
+						onClick={() => {
+							setfirst("weekly");
+						}}>
+						Weekly
+					</h6>
+					<h6
+						className="change_on_hover"
+						onClick={() => {
+							setfirst("monthly");
+						}}>
+						Monthly
+					</h6>
 				</div>
 			</div>
 			<div className="small_cards_here">
-				<div className="small_card_work">
-					<div className="work_image">
-						<img src={workimg} alt="work" />
-					</div>
-					<div className="small_card_work_subspace">
-						<div
-							style={{
-								display: "flex",
-								alignContent: "center",
-								alignItems: "center",
-								justifyContent: "space-between",
-
-								color: "white",
-							}}>
-							<h5>Work</h5>
-							<img src={epll} alt="ellip" height={5} width={20} />
-						</div>
-						<h2>36 hrs</h2>
-						<h4>Last week 36 hrs</h4>
-					</div>
-				</div>
-				<div className="small_card_work">
-					<div className="work_image">
-						<img src={workimg} alt="work" />
-					</div>
-					<div className="small_card_work_subspace">
-						<div
-							style={{
-								display: "flex",
-								alignContent: "center",
-								alignItems: "center",
-								justifyContent: "space-between",
-
-								color: "white",
-							}}>
-							<h5>Work</h5>
-							<img src={epll} alt="ellip" height={5} width={20} />
-						</div>
-						<h2>36 hrs</h2>
-						<h4>Last week 36 hrs</h4>
-					</div>
-				</div>
-				<div className="small_card_work">
-					<div className="work_image">
-						<img src={workimg} alt="work" />
-					</div>
-					<div className="small_card_work_subspace">
-						<div
-							style={{
-								display: "flex",
-								alignContent: "center",
-								alignItems: "center",
-								justifyContent: "space-between",
-
-								color: "white",
-							}}>
-							<h5>Work</h5>
-							<img src={epll} alt="ellip" height={5} width={20} />
-						</div>
-						<h2>36 hrs</h2>
-						<h4>Last week 36 hrs</h4>
-					</div>
-				</div>
-				<div className="small_card_work">
-					<div className="work_image">
-						<img src={workimg} alt="work" />
-					</div>
-					<div className="small_card_work_subspace">
-						<div
-							style={{
-								display: "flex",
-								alignContent: "center",
-								alignItems: "center",
-								justifyContent: "space-between",
-
-								color: "white",
-							}}>
-							<h5>Work</h5>
-							<img src={epll} alt="ellip" height={5} width={20} />
-						</div>
-						<h2>36 hrs</h2>
-						<h4>Last week 36 hrs</h4>
-					</div>
-				</div>
-				<div className="small_card_work">
-					<div className="work_image">
-						<img src={workimg} alt="work" />
-					</div>
-					<div className="small_card_work_subspace">
-						<div
-							style={{
-								display: "flex",
-								alignContent: "center",
-								alignItems: "center",
-								justifyContent: "space-between",
-
-								color: "white",
-							}}>
-							<h5>Work</h5>
-							<img src={epll} alt="ellip" height={5} width={20} />
-						</div>
-						<h2>36 hrs</h2>
-						<h4>Last week 36 hrs</h4>
-					</div>
-				</div>
-				<div className="small_card_work">
-					<div className="work_image">
-						<img src={workimg} alt="work" />
-					</div>
-					<div className="small_card_work_subspace">
-						<div
-							style={{
-								display: "flex",
-								alignContent: "center",
-								alignItems: "center",
-								justifyContent: "space-between",
-
-								color: "white",
-							}}>
-							<h5>Work</h5>
-							<img src={epll} alt="ellip" height={5} width={20} />
-						</div>
-						<h2>36 hrs</h2>
-						<h4>Last week 36 hrs</h4>
-					</div>
-				</div>
+				{jsondata.map((simobj) => {
+					return <Smallcard first={first} simobj={simobj} />;
+				})}
 			</div>
 		</div>
 	);
