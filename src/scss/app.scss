@@ -1,0 +1,65 @@
+@import "helper/variables";
+@import "helper/mixins";
+.App {
+	display: grid;
+	background-color: $bgcolor;
+	@extend %autohw;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 4fr;
+	column-gap: 20px;
+
+	.add_bg_here {
+		background-color: $reportcolor2;
+		border-radius: 18px;
+		margin: 10vw 0vw 10vw 10vw;
+	}
+	.main_app_report_for {
+		background-color: $reportcolor;
+		color: $textcolor;
+		@extend %autohw;
+		border-radius: 18px;
+		text-align: left;
+		.main_app_fun {
+			padding: 20px;
+		}
+		.app_person_image {
+			border: 2px solid white;
+			border-radius: 25px;
+		}
+	}
+	.main_stats {
+		color: $textcolor2;
+		margin-left: 20px;
+		font-size: 20px;
+	}
+	.small_cards_here {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		row-gap: 20px;
+		column-gap: 20px;
+		margin: 10vw 10vw 10vw 0vw;
+
+		.small_card_work {
+			background-color: $smallcolorone;
+			border-radius: 18px;
+			overflow: hidden;
+			.work_image {
+				text-align: end;
+				margin-right: 10px;
+				margin-top: -8px;
+				z-index: 3;
+				overflow: hidden;
+			}
+			.small_card_work_subspace {
+				background-color: $smallcolortwo;
+				border-radius: 18px;
+				color: white;
+				padding: 10px;
+				font-size: 18px;
+				margin-top: -20px;
+				overflow: hidden;
+			}
+		}
+	}
+}
