@@ -1,73 +1,78 @@
 @import "helper/variables";
 @import "helper/mixins";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.App {
-	display: grid;
+.app_all_of_it {
+	padding: 10vw 10vw;
 	background-color: $bgcolor;
-	@extend %autohw;
-	grid-template-columns: 1fr 3fr;
-	grid-template-rows: 1fr;
-	column-gap: 30px;
-	font-weight: lighter;
-	font-family: "Rubik", sans-serif;
-	.add_bg_here {
-		background-color: $reportcolor2;
-		border-radius: 18px;
-		margin: 10vw 0vw 10vw 10vw;
-	}
-	.main_app_report_for {
-		background-color: $reportcolor;
-		color: $textcolor;
-		@extend %autohw;
-		border-radius: 18px;
-		text-align: left;
-		.main_app_fun {
-			padding: 20px;
-		}
-		.app_person_image {
-			border: 2px solid white;
-			border-radius: 25px;
-		}
-	}
-	.main_stats {
-		color: #6e72b1;
-		margin-left: 20px;
-		font-size: 20px;
-		cursor: pointer;
-		.change_on_hover:hover {
-			color: white;
-		}
-	}
-	.small_cards_here {
+	.App {
 		display: grid;
-		grid-template-columns: 0.25fr 0.25fr 0.25fr;
-		grid-template-rows: 0.5fr 0.5fr;
-		row-gap: 30px;
+		background-color: $bgcolor;
+		grid-template-columns: 0.8fr 2.5fr;
+		grid-template-rows: 1fr;
+		align-content: center;
+		justify-content: center;
 		column-gap: 30px;
-		margin: 10vw 10vw 10vw 0vw;
-		.small_card_work {
+		font-weight: lighter;
+		font-family: "Rubik", sans-serif;
+		.add_bg_here {
+			background-color: $reportcolor2;
 			border-radius: 18px;
-			overflow: hidden;
-
-			.work_image {
-				text-align: end;
-				margin-right: 30px;
-				margin-top: -20px;
-
-				z-index: 3;
-				overflow: hidden;
+		}
+		.main_app_report_for {
+			background-color: $reportcolor;
+			color: $textcolor;
+			@extend %autohw;
+			border-radius: 18px;
+			text-align: left;
+			.main_app_fun {
+				padding: 20px;
 			}
-			.small_card_work_subspace {
-				background-color: $smallcolortwo;
-				border-radius: 18px;
+			.app_person_image {
+				border: 2px solid white;
+				border-radius: 25px;
+			}
+		}
+		.main_stats {
+			color: #6e72b1;
+			margin-left: 20px;
+			font-size: 20px;
+			cursor: pointer;
+			.change_on_hover:hover {
 				color: white;
-				font-size: 18px;
+			}
+		}
+		.small_cards_here {
+			display: grid;
+			grid-template-columns: 0.5fr 0.5fr 0.5fr;
+			grid-template-rows: 0.5fr 0.5fr;
+
+			row-gap: 30px;
+			column-gap: 30px;
+
+			.small_card_work {
+				border-radius: 18px;
 				overflow: hidden;
 
-				.work_and_ellip {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
+				.work_image {
+					text-align: end;
+					margin-right: 30px;
+					margin-top: -20px;
+
+					z-index: 3;
+					overflow: hidden;
+				}
+				.small_card_work_subspace {
+					background-color: $smallcolortwo;
+					border-radius: 18px;
+					color: white;
+					font-size: 18px;
+					overflow: hidden;
+
+					.work_and_ellip {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+					}
 				}
 			}
 		}

@@ -28,9 +28,10 @@ function Smallcard({ first, simobj }) {
 				<p
 					style={{
 						fontSize: "14px",
-						marginTop: "-28px",
+						marginTop: "-35px",
 						marginLeft: "20px",
 						color: "#8b8dbd",
+						paddingBottom: "10px",
 					}}>
 					Last {anewstr} - {strone[first].previous} hrs
 				</p>
