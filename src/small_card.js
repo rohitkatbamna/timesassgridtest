@@ -13,14 +13,14 @@ function Smallcard({ first, simobj }) {
 	return (
 		<div className="small_card_work" style={{ backgroundColor: simobj.color }}>
 			<div className="work_image">
-				<img src={simobj.img} alt="simobj.title" />
+				<img src={simobj.img} alt="simobj.title" height={75} width={75} />
 			</div>
 			<div className="small_card_work_subspace">
 				<div className="work_and_ellip">
 					<h5>{simobj.title}</h5>
 					<img src={epll} alt="ellip" height={5} width={20} />
 				</div>
-				<h2>{strone[first].current} HRS</h2>
+				<h2>{strone[first].current} hrs</h2>
 				<h4>
 					Last {anewstr} {strone[first].previous} hrs
 				</h4>
