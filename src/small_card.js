@@ -11,7 +11,7 @@ function Smallcard({ first, simobj }) {
 		anewstr = "day";
 	}
 	return (
-		<div className="small_card_work">
+		<div className="small_card_work" style={{ backgroundColor: simobj.color }}>
 			<div className="work_image">
 				<img src={simobj.img} alt="simobj.title" />
 			</div>
