@@ -77,4 +77,49 @@
 			}
 		}
 	}
+	@media only screen and (max-width: 961px) {
+		padding: 15vw 2vw;
+	}
+	@media only screen and (max-width: 776px) {
+		padding: 15vw 1vw;
+		.App {
+			grid-template-columns: 0.7fr;
+			grid-template-rows: 0.7fr;
+			row-gap: 30px;
+			.main_app_report_for {
+				.main_app_fun {
+					display: flex;
+					align-content: center;
+					align-items: center;
+					justify-content: center;
+					.homer_simpsons {
+						margin-left: 20px;
+					}
+				}
+			}
+			.main_stats {
+				display: flex;
+				justify-content: space-around;
+				margin-left: 0px;
+			}
+			.small_cards_here {
+				grid-template-columns: 1fr;
+				grid-template-rows: 1fr;
+				.small_card_work {
+					.small_card_work_subspace {
+						.last_week_and_hrs {
+							display: flex;
+							align-content: center;
+							align-items: center;
+							justify-content: space-between;
+							padding: 0px 10px;
+							.last_week_tonight {
+								margin-top: 0px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

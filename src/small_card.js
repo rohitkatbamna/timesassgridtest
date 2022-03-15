@@ -22,19 +22,23 @@ function Smallcard({ first, simobj }) {
 					<p style={{ fontSize: "15px", fontWeight: "bold" }}>{simobj.title}</p>
 					<img src={epll} alt="ellip" height={5} width={20} />
 				</div>
-				<p style={{ fontSize: "40px", marginLeft: "25px", marginTop: "20px" }}>
-					{strone[first].current}hrs
-				</p>
-				<p
-					style={{
-						fontSize: "14px",
-						marginTop: "-35px",
-						marginLeft: "20px",
-						color: "#8b8dbd",
-						paddingBottom: "10px",
-					}}>
-					Last {anewstr} - {strone[first].previous} hrs
-				</p>
+				<div className="last_week_and_hrs">
+					<p
+						style={{ fontSize: "40px", marginLeft: "25px", marginTop: "20px" }}>
+						{strone[first].current}hrs
+					</p>
+					<p
+						className="last_week_tonight"
+						style={{
+							fontSize: "14px",
+							marginTop: "-35px",
+							marginLeft: "20px",
+							color: "#8b8dbd",
+							paddingBottom: "10px",
+						}}>
+						Last {anewstr} - {strone[first].previous} hrs
+					</p>
+				</div>
 			</div>
 		</div>
 	);

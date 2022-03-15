@@ -19,8 +19,10 @@ function App() {
 								alt="Person"
 								className="app_person_image"
 							/>
-							<p>Report for</p>
-							<h1>Homer Simpson</h1>
+							<div className="homer_simpsons">
+								<p>Report for</p>
+								<h1>Homer Simpson</h1>
+							</div>
 						</div>
 					</div>
 					<div className="main_stats">
