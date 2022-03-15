@@ -13,16 +13,26 @@ function Smallcard({ first, simobj }) {
 	return (
 		<div className="small_card_work" style={{ backgroundColor: simobj.color }}>
 			<div className="work_image" style={{ zIndex: "1" }}>
-				<img src={simobj.img} alt="simobj.title" height={75} width={75} />
+				<img src={simobj.img} alt="simobj.title" height={55} width={55} />
 			</div>
 			<div className="small_card_work_subspace">
-				<div className="work_and_ellip">
-					<p>{simobj.title}</p>
+				<div
+					className="work_and_ellip"
+					style={{ marginRight: "30px", marginLeft: "30px" }}>
+					<p style={{ fontSize: "15px", fontWeight: "bold" }}>{simobj.title}</p>
 					<img src={epll} alt="ellip" height={5} width={20} />
 				</div>
-				<p style={{ fontSize: "40px" }}>{strone[first].current}hrs</p>
-				<p>
-					Last {anewstr} {strone[first].previous} hrs
+				<p style={{ fontSize: "40px", marginLeft: "25px", marginTop: "20px" }}>
+					{strone[first].current}hrs
+				</p>
+				<p
+					style={{
+						fontSize: "14px",
+						marginTop: "-28px",
+						marginLeft: "20px",
+						color: "#8b8dbd",
+					}}>
+					Last {anewstr} - {strone[first].previous} hrs
 				</p>
 			</div>
 		</div>

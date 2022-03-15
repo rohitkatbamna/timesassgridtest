@@ -45,7 +45,6 @@
 		row-gap: 30px;
 		column-gap: 30px;
 		margin: 10vw 10vw 10vw 0vw;
-
 		.small_card_work {
 			border-radius: 18px;
 			overflow: hidden;
@@ -53,7 +52,7 @@
 			.work_image {
 				text-align: end;
 				margin-right: 30px;
-				margin-top: -8px;
+				margin-top: -20px;
 
 				z-index: 3;
 				overflow: hidden;
@@ -62,9 +61,9 @@
 				background-color: $smallcolortwo;
 				border-radius: 18px;
 				color: white;
-				margin-top: -30px;
 				font-size: 18px;
 				overflow: hidden;
+
 				.work_and_ellip {
 					display: flex;
 					align-items: center;
